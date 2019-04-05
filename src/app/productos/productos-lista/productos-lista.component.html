@@ -1,19 +1,16 @@
-<h2 *ngIf="!carrito">Búsqueda de productos</h2>
-<h2 *ngIf="carrito">Carrito de compras</h2>
+<h2 *ngIf="!carrito">
+  Lista de productos
+</h2>
+<h2 *ngIf="carrito">
+  Carrito de compras
+</h2>
 
-<button
-type="button"
-id="bAdd"
-class="btn btn-success btn-lg mt-2"
-data-toggle="modal"
-data-target="#modelId"
-(click)="agregar()">
+<button type="button" id="bAdd" class="btn btn-success btn-lg mt-2" data-toggle="modal" data-target="#modelId"
+  (click)="agregar()">
   Añadir al carrito
 </button>
 
 <div>
-  <app-producto-item
-    *ngFor="let prod of prductos" 
-    [producto]="prod">
-    </app-producto-item>
+  <app-producto-item *ngFor="let prod of prductos" [producto]="prod">
+  </app-producto-item>
 </div>
